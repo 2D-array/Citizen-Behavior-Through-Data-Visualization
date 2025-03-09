@@ -465,10 +465,11 @@ with tab3:
     # Add trendline
     fig.update_traces(marker=dict(line=dict(width=0.5, color='DarkSlateGrey')))
     fig.add_traces(
-        px.scatter(
-            filtered_df, x="Social_Media_Hours", y="Sleep_Hours", trendline="ols"
-        ).data[1]
-    )
+    px.scatter(
+        filtered_df, x="Social_Media_Hours", y="Sleep_Hours", trendline="ols"
+    ).data[1]
+)
+
     
     st.plotly_chart(fig, use_container_width=True)
     
